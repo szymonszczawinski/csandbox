@@ -7,3 +7,9 @@ void myPrintHelloMake(void) {
 
   return;
 }
+void sayHello(void) {
+
+  printf("Hello makefiles!\n");
+
+  return;
+}
