@@ -5,6 +5,7 @@
 #include <ctype.h>
 #include <stdio.h>
 
+void displayArrayInfo(int tablica[]);
 int main() {
   printf("%ld\n", __STDC_VERSION__);
   // call a function in another file
@@ -38,5 +39,11 @@ int main() {
   if (today == Sun || today == Sat) {
     printf("weekend, party time\n");
   }
+  int tablica[] = {1, 2, 3, 4, 1, 2, 3, 4, 0, 0};
+  displayArrayInfo(tablica);
   return 0;
+}
+
+void displayArrayInfo(int tablica[]) {
+  printf("rozmiar = %zu", sizeof(tablica));
 }
