@@ -1,10 +1,11 @@
 #include "app/calculator/calc.h"
 #include "app/hellofunc.h"
 #include "app/model/model.c"
+#include "app/model/myobject.h"
 #include "app/service/service.h"
 #include <ctype.h>
 #include <stdio.h>
-
+#include <stdlib.h>
 void displayArrayInfo(int tablica[]);
 int main() {
   printf("%ld\n", __STDC_VERSION__);
@@ -41,6 +42,9 @@ int main() {
   }
   int tablica[] = {1, 2, 3, 4, 1, 2, 3, 4, 0, 0};
   displayArrayInfo(tablica);
+  object_t *counter = new_obj_integer(5);
+  printf("counter: %d\n", counter->data.v_int);
+  free(counter);
   return 0;
 }
 

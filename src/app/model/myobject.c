@@ -1,5 +1,4 @@
 #include "myobject.h"
-#include <iso646.h>
 #include <stdlib.h>
 #include <string.h>
 object_t *new_obj_integer(int value) {
