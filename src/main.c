@@ -6,7 +6,19 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 void displayArrayInfo(int tablica[]);
+typedef struct {
+  int id;
+  char name[64];
+} Person;
+
+Person do_a_thing(Person p) {
+  p.id = 100;
+  memset(p.name, '0', 64);
+  return p;
+}
+
 int main() {
   printf("%ld\n", __STDC_VERSION__);
   // call a function in another file
@@ -22,7 +34,6 @@ int main() {
   printf("%s - %d\n", characterName, age);
 
   int diff2 = substract(6, 2);
-  runService();
   float x = 100.12345;
 
   const float PI = 3.14;
@@ -45,6 +56,9 @@ int main() {
   object_t *counter = new_obj_integer(5);
   printf("counter: %d\n", counter->data.v_int);
   free(counter);
+  Person p = {0};
+  p = do_a_thing(p);
+  printf("Person p %d, %s\n", p.id, p.name);
   return 0;
 }
 

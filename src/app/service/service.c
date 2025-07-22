@@ -1,3 +1,2 @@
 #include "service.h"
-#include <stdio.h>
-void runService() { printf("Hello\n"); }
+int substract_x(int a, int b) { return a - b; }
