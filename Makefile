@@ -1,13 +1,26 @@
-BIN_DIR = bin
+# Unity source
+UNITY_SRC = unity/unity.c
+CC = gcc
+BUILD_DIR = build
+
+# BIN_DIR = bin
+BIN_DIR = bin$(if $(DEBUG),/debug,/release)
 TARGET = $(BIN_DIR)/myproject
 SYMLINK = myproject
 
-CC = gcc
-CFLAGS = -Iunity -Isrc -Wall -Wextra
-BUILD_DIR = build
+# Base compiler flags
+CFLAGS_BASE = -Wall -Wextra -Isrc -Iunity
+# Enable debug flags when DEBUG=1
+ifeq ($(DEBUG),1)
+    CFLAGS += -g -O0
+    BUILD_MODE := [DEBUG]
+else
+    CFLAGS += -O2
+    BUILD_MODE := [RELEASE]
+endif
+CFLAGS += $(CFLAGS_BASE)
 
 # Source files and corresponding object files in build/
-
 MAIN_SRC := src/main.c
 MAIN_OBJ := $(patsubst src/%.c,$(BUILD_DIR)/%.o,$(MAIN_SRC))
 
@@ -15,8 +28,6 @@ MAIN_OBJ := $(patsubst src/%.c,$(BUILD_DIR)/%.o,$(MAIN_SRC))
 SRC := $(filter-out $(MAIN_SRC), $(shell find src -name "*.c"))
 OBJ := $(patsubst src/%.c,$(BUILD_DIR)/%.o,$(SRC))
 
-# Unity source
-UNITY_SRC = unity/unity.c
 
 # Test files and binaries
 TEST_SRC := $(shell find test -name "Test*.c")
@@ -27,8 +38,8 @@ TEST_BINS := $(patsubst test/%.c,$(BUILD_DIR)/test/%.test,$(TEST_SRC))
 all: main
 
 # Link main executable
-
 main: $(OBJ) $(MAIN_OBJ)
+	@echo "🔧 Building in mode: $(BUILD_MODE)"
 	@mkdir -p $(BIN_DIR)
 	$(CC) -o $(TARGET) $^
 	@ln -sf $(TARGET) $(SYMLINK)
@@ -68,4 +79,4 @@ test: $(TEST_BINS)
 	done
 
 clean:
-	rm -rf $(BUILD_DIR) $(BIN_DIR) $(SYMLINK)
+	rm -rf $(BUILD_DIR) bin $(SYMLINK)
