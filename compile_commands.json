@@ -1,0 +1,114 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iunity",
+      "-Isrc",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "build/app/calculator/calc.o",
+      "src/app/calculator/calc.c"
+    ],
+    "directory": "/home/ubuntu/work/workspaces/c_ws/csandbox",
+    "file": "/home/ubuntu/work/workspaces/c_ws/csandbox/src/app/calculator/calc.c",
+    "output": "/home/ubuntu/work/workspaces/c_ws/csandbox/build/app/calculator/calc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iunity",
+      "-Isrc",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "build/app/hellofunc.o",
+      "src/app/hellofunc.c"
+    ],
+    "directory": "/home/ubuntu/work/workspaces/c_ws/csandbox",
+    "file": "/home/ubuntu/work/workspaces/c_ws/csandbox/src/app/hellofunc.c",
+    "output": "/home/ubuntu/work/workspaces/c_ws/csandbox/build/app/hellofunc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iunity",
+      "-Isrc",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "build/app/model/model.o",
+      "src/app/model/model.c"
+    ],
+    "directory": "/home/ubuntu/work/workspaces/c_ws/csandbox",
+    "file": "/home/ubuntu/work/workspaces/c_ws/csandbox/src/app/model/model.c",
+    "output": "/home/ubuntu/work/workspaces/c_ws/csandbox/build/app/model/model.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iunity",
+      "-Isrc",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "build/app/model/stack.o",
+      "src/app/model/stack.c"
+    ],
+    "directory": "/home/ubuntu/work/workspaces/c_ws/csandbox",
+    "file": "/home/ubuntu/work/workspaces/c_ws/csandbox/src/app/model/stack.c",
+    "output": "/home/ubuntu/work/workspaces/c_ws/csandbox/build/app/model/stack.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iunity",
+      "-Isrc",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "build/app/model/myobject.o",
+      "src/app/model/myobject.c"
+    ],
+    "directory": "/home/ubuntu/work/workspaces/c_ws/csandbox",
+    "file": "/home/ubuntu/work/workspaces/c_ws/csandbox/src/app/model/myobject.c",
+    "output": "/home/ubuntu/work/workspaces/c_ws/csandbox/build/app/model/myobject.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iunity",
+      "-Isrc",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "build/app/service/service.o",
+      "src/app/service/service.c"
+    ],
+    "directory": "/home/ubuntu/work/workspaces/c_ws/csandbox",
+    "file": "/home/ubuntu/work/workspaces/c_ws/csandbox/src/app/service/service.c",
+    "output": "/home/ubuntu/work/workspaces/c_ws/csandbox/build/app/service/service.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iunity",
+      "-Isrc",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "build/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/ubuntu/work/workspaces/c_ws/csandbox",
+    "file": "/home/ubuntu/work/workspaces/c_ws/csandbox/src/main.c",
+    "output": "/home/ubuntu/work/workspaces/c_ws/csandbox/build/main.o"
+  }
+]
